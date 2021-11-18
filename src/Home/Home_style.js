@@ -4,17 +4,18 @@ const Header = styled.div`
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   background-color: #6d7ce4;
-  height: 150px;
+  height: 30vh;
   width: 100vw;
   top: 0;
   position: absolute;
   padding: 25px 30px 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   h1{
       font-size: 28px;
       font-weight: 700;
+      text-align: center;
   }
   h2{
       text-align: center;
@@ -24,7 +25,7 @@ const Header = styled.div`
 `;
 const Footer = styled.div`
   background-color: #4d65a8;
-  height: 130px;
+  height: 20vh;
   width: 100vw;
 
   position: absolute;
@@ -36,8 +37,9 @@ const HomePage = styled.div`
   position: relative;
 `;
 const Img = styled.img`
-  margin: 150px 0 50px 0;
+  margin: 30vh 0 50px 0;
   width: 100vw;
+  height: 55vh;
 `;
 export {
   Header, Footer, HomePage, Img,
