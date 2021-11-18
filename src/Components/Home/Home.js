@@ -7,7 +7,7 @@ import {
   HomePage,
   Img,
 } from './Home_style';
-import meditation from '../Assets/meditation_woman.jpg';
+import meditation from '../../Assets/meditation_woman.jpg';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <HomePage>
       <Header>
-        <h1>Bem vindo ao GratiBox</h1>
+        <h1>Bem vindo ao <strong>GratiBox</strong></h1>
         <h2>
           Receba em casa um box com chás, produtos organicos, incensos e muito
           mais...
