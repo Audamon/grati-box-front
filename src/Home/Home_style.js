@@ -45,7 +45,7 @@ const Img = styled.img`
   width: 100vw;
   height: 55vh;
 `;
-const GoesToSignUp = styled.button`
+const GoesToSignUpButton = styled.button`
   border: none;
   border-radius: 8px;
   height: 40px;
@@ -56,7 +56,7 @@ const GoesToSignUp = styled.button`
   font-size: 18px;
 
 `;
-const GoesToLogin = styled.button`
+const GoesToLoginButton = styled.button`
   border: none;
   background-color: #4D65A8;
   color: #ffffff;
@@ -65,5 +65,5 @@ const GoesToLogin = styled.button`
 `;
 export {
   Header, Footer, HomePage, Img,
-  GoesToLogin, GoesToSignUp,
+  GoesToLoginButton, GoesToSignUpButton,
 };
