@@ -1,5 +1,5 @@
 import {
-  Footer, Header, HomePage, Img,
+  Footer, GoesToLogin, GoesToSignUp, Header, HomePage, Img,
 } from './Home_style';
 import meditation from '../Assets/meditation_woman.jpg';
 
@@ -11,7 +11,10 @@ export default function Home() {
           <h2>Receba em casa um box com chás, produtos organicos, incensos e muito mais...</h2>
       </Header>
       <Img src={meditation}/>
-      <Footer></Footer>
+      <Footer>
+          <GoesToSignUp>Quero começar</GoesToSignUp>
+          <GoesToLogin>Já sou grato</GoesToLogin>
+      </Footer>
     </HomePage>
   );
 }

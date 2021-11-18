@@ -27,9 +27,13 @@ const Footer = styled.div`
   background-color: #4d65a8;
   height: 20vh;
   width: 100vw;
-
   position: absolute;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 0 5% 0;
 `;
 const HomePage = styled.div`
   height: 100vh;
@@ -41,6 +45,25 @@ const Img = styled.img`
   width: 100vw;
   height: 55vh;
 `;
+const GoesToSignUp = styled.button`
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 200px;
+  color: #ffffff;
+  background-color: #8C97EA;
+  font-weight: 700;
+  font-size: 18px;
+
+`;
+const GoesToLogin = styled.button`
+  border: none;
+  background-color: #4D65A8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+`;
 export {
   Header, Footer, HomePage, Img,
+  GoesToLogin, GoesToSignUp,
 };
