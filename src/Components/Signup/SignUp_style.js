@@ -14,6 +14,13 @@ const SignUpPage = styled.div`
       font-size: 28px;
       font-weight: 500;
   }
+  a{
+    color: #ffffff;
+    font-size:18px;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+  }
 `;
 const Form = styled.form`
   margin-top: 50px;
