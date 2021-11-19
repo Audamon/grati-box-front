@@ -36,6 +36,8 @@ const Input = styled.input`
     height: 60px;
     border: 1px solid #604848;
     border-radius: 10px;
+    font-size: 28px;
+    padding: 0 0 0 10px;
     ::placeholder{
         font-size: 24px;
         font-weight: 500;
