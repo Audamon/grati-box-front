@@ -14,7 +14,7 @@ const Header = styled.div`
   justify-content: space-around;
   h1{
       font-size: 28px;
-      font-weight: 700;
+      font-weight: 500;
       text-align: center;
   }
   h2{
