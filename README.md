@@ -6,5 +6,4 @@ How to run
 - npm run start
 
 Technologies
-- Node
 - React
