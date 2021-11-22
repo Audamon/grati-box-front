@@ -11,13 +11,15 @@ export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  function checkDataToSendoToTheRegister() {
+  function checkDataToSendoToTheRegister(e) {
+    e.preventDefault();
     if (!name || !password || !email || !confirmPassword) {
       alert('Preencha os campos para realizar o cadastro');
-      navigate('/signup');
+      return;
     }
     if (password !== confirmPassword) {
       alert('As senhas não são iguais');
+      navigate('/signup');
     }
     const body = {
       name,
@@ -30,7 +32,7 @@ export default function SignUp() {
   return (
     <SignUpPage>
       <h1>Bem vindo ao <strong>GratiBox</strong></h1>
-      <Form onSubmit={checkDataToSendoToTheRegister}>
+      <Form onSubmit={(e) => checkDataToSendoToTheRegister(e)}>
         <Input type='text' placeholder=' Nome' value={name} onChange={(e) => setName(e.target.value)}></Input>
         <Input type='email' placeholder=' Email' value={email} onChange={(e) => setEmail(e.target.value)}></Input>
         <Input type='password' placeholder=' Senha' value={password} onChange={(e) => setPassword(e.target.value)}></Input>
