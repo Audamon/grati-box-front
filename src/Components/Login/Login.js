@@ -4,7 +4,7 @@ import userContext from '../../Services/Context/UserContext.js';
 import {
   LoginPage, Form, Input, Button,
 } from './Login_style.js';
-import { sendBodyToDoTheLoginToTheBackEnd } from '../../Services/Api.js';
+import { sendBodyToDoTheLoginToTheBackEnd, storeUser } from '../../Services/Api.js';
 
 export default function Login() {
   const { setUser } = useContext(userContext);
@@ -25,10 +25,12 @@ export default function Login() {
     promise.then((res) => {
       console.log(res.data.name);
       setUser(res.data.name);
+      console.log(res.data.token);
+      storeUser(res.data);
       if (!res.data.services) {
         navigate('/subscriptions');
       } else {
-        navigate('/userservices');
+        navigate('/userservice');
       }
     });
   }

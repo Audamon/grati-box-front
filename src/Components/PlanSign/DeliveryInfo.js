@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import userContext from '../../Services/Context/UserContext.js';
 import planContext from '../../Services/Context/PlanContext.js';
 import {
@@ -23,6 +23,7 @@ export default function DeliveryInfo() {
   const [city, setCity] = useState('');
   const [open, setOpen] = useState(false);
   const [uf, setUf] = useState('Estado');
+  const navigate = useNavigate();
   function endOrder() {
     const completeAdress = `${address}, ${cep}, ${city}/${uf}`;
     const t = {
@@ -31,6 +32,7 @@ export default function DeliveryInfo() {
     };
     setSignPlan({ ...t, ...signPlan });
     send(signPlan);
+    navigate('/userservice');
   }
   return (
     <PlanSignPage>

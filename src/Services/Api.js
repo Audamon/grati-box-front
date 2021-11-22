@@ -58,8 +58,22 @@ function send(signPlan) {
       alert('Usuśrio não logado');
     }
   });
+  return promise;
 }
-
+function getServiceInfo() {
+  const route = 'userservice';
+  const { token } = getStoredUser();
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const promise = axios.get(api + route, config);
+  promise.catch((err) => {
+    console.log(err);
+  });
+  return promise;
+}
 export {
-  sendBodyToDoTheRegisterToTheBackEnd, sendBodyToDoTheLoginToTheBackEnd, getDeliveryDays, storeUser, getStoredUser, send,
+  sendBodyToDoTheRegisterToTheBackEnd, sendBodyToDoTheLoginToTheBackEnd, getDeliveryDays, storeUser, getStoredUser, send, getServiceInfo,
 };

@@ -8,6 +8,7 @@ import Login from './Components/Login/Login.js';
 import Subscription from './Components/Subscription/Subscription.js';
 import PlanSign from './Components/PlanSign/PlanSign.js';
 import DeliveryInfo from './Components/PlanSign/DeliveryInfo.js';
+import UserService from './Components/UserService/UserService.js';
 
 export default function App() {
   const [user, setUser] = useState();
@@ -23,6 +24,7 @@ export default function App() {
           <Route exact path="/subscriptions" element={<Subscription />}></Route>
           <Route exact path="/sign_plan" element={<PlanSign />}></Route>
           <Route exact path="/deliveryinfo" element={<DeliveryInfo />}></Route>
+          <Route exact path="/userservice" element={<UserService />}></Route>
         </Routes>
       </BrowserRouter>
     </userContext.Provider>
