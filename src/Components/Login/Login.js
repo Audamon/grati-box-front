@@ -1,11 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import userContext from '../../Services/Context/UserContext.js';
 import {
   LoginPage, Form, Input, Button,
 } from './Login_style.js';
 import { sendBodyToDoTheLoginToTheBackEnd } from '../../Services/Api.js';
 
 export default function Login() {
+  const { setUser } = useContext(userContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -21,6 +23,8 @@ export default function Login() {
     };
     const promise = sendBodyToDoTheLoginToTheBackEnd(body);
     promise.then((res) => {
+      console.log(res.data.name);
+      setUser(res.data.name);
       if (!res.data.services) {
         navigate('/subscriptions');
       } else {
